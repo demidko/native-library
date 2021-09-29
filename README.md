@@ -9,19 +9,6 @@ with [`Conan`](https://github.com/conan-io/cmake-conan).
 Make sure you are signed in to your GitHub account, then just
 click [`here`](https://github.com/demidko/native-library/generate) to use template.
 
-## Motivation and goals
-
-In the С++ world, now...
-
-* When an idea comes up, you have to create manually `CMakeLists.txt`,` README.md`, a directories structure, or finish
-  the project created by the IDE to a portable state.
-* There is no dependency management without difficulties.
-* There is no cross-platform build without Qt.
-* These problems overlap, causing troubles for developers.
-
-Therefore, `Native Library` is a template for creating and building cross-platform C++ projects with external
-dependencies. `Native Library` is a tool like `start.technology.io` sites for Java, .NET and Rust.
-
 ## Features and benefits
 
 * Full compatibility with existing technologies. No build configuration files are added except for the
@@ -50,6 +37,10 @@ cmake --build bin --target all
 
 After that, the utility will appear in the `bin` directory under the name `lib`. The tests can be run by launching
 the `test` file located nearby.
+
+## Interop with Java
+
+See [JNR project](https://github.com/jnr/jnr-ffi)
 
 ## Containerization
 

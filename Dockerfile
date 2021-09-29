@@ -1,4 +1,4 @@
-FROM conanio/clang11 as builder
+FROM conanio/clang12-ubuntu16.04 as builder
 USER root
 WORKDIR /project
 COPY src ./src
@@ -11,5 +11,4 @@ RUN cmake --build ./bin --target all
 RUN ./bin/test
 
 FROM debian as backend
-COPY --from=builder /project/bin/app /app
-ENTRYPOINT ["/app"]
+COPY --from=builder /project/bin/liblib /liblib

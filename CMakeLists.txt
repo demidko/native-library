@@ -29,7 +29,6 @@ add_library(lib SHARED ${proj_sources})
 # 3. link dependency with executable app here
 target_link_libraries(lib PRIVATE ThreadPool::ThreadPool spdlog::spdlog cpr::cpr simdjson::simdjson ICU::io ICU::i18n ICU::uc ICU::data)
 
-#[[Changing the entry point for tests]]
 file(GLOB test_sources test/*.cpp)
 add_executable(test ${proj_sources} ${test_sources})
 # 4. link dependency with tests here
