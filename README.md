@@ -1,13 +1,13 @@
-# utility
+# Native Library
 
-A cross-platform `C++20` command line tool template with dependency manager, powered by integration
+A cross-platform `C++20` native library template with dependency manager, powered by integration
 of [`CMake`](https://cmake.org/)
 with [`Conan`](https://github.com/conan-io/cmake-conan).
 
 ## Usage
 
 Make sure you are signed in to your GitHub account, then just
-click [`here`](https://github.com/demidko/conan-utility/generate) to use template.
+click [`here`](https://github.com/demidko/native-library/generate) to use template.
 
 ## Motivation and goals
 
@@ -19,8 +19,8 @@ In the С++ world, now...
 * There is no cross-platform build without Qt.
 * These problems overlap, causing troubles for developers.
 
-Therefore, `utility` is a template for creating and building cross-platform C++ projects with external
-dependencies. `Utility` is a tool like `start.technology.io` sites for Java, .NET and Rust.
+Therefore, `Native Library` is a template for creating and building cross-platform C++ projects with external
+dependencies. `Native Library` is a tool like `start.technology.io` sites for Java, .NET and Rust.
 
 ## Features and benefits
 
@@ -48,8 +48,8 @@ Building together the application and tests:
 cmake --build bin --target all
 ```  
 
-After that, the main self-executable utility will appear in the `bin` directory under the name `app`. The tests can be
-run by launching the `test` file located nearby.
+After that, the utility will appear in the `bin` directory under the name `lib`. The tests can be run by launching
+the `test` file located nearby.
 
 ## Containerization
 

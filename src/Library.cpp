@@ -1,5 +1,6 @@
+#include "Library.h"
 #include <iostream>
 
-int main(int argc, char **argv) {
+void itWorks() {
   std::cout << "It works" << std::endl;
 }
