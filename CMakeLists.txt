@@ -3,18 +3,15 @@ project(library)
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR})
 list(APPEND CMAKE_PREFIX_PATH ${CMAKE_BINARY_DIR})
 add_definitions("-std=c++20")
-if(NOT EXISTS "${CMAKE_BINARY_DIR}/conan.cmake")
+if (NOT EXISTS "${CMAKE_BINARY_DIR}/conan.cmake")
     message(STATUS "Downloading conan.cmake from https://github.com/conan-io/cmake-conan")
     file(DOWNLOAD "https://raw.githubusercontent.com/conan-io/cmake-conan/v0.16.1/conan.cmake"
             "${CMAKE_BINARY_DIR}/conan.cmake"
             EXPECTED_HASH SHA256=396e16d0f5eabdc6a14afddbcfff62a54a7ee75c6da23f32f7a31bc85db23484
             TLS_VERIFY ON)
-endif()
+endif ()
 include(${CMAKE_BINARY_DIR}/conan.cmake)
-
-conan_add_remote(NAME center INDEX 1 URL https://center.conan.io VERIFY_SSL True)
-conan_add_remote(NAME bintray INDEX 2 URL https://api.bintray.com/conan/bincrafters/public-conan VERIFY_SSL True)
-
+conan_add_remote(NAME conan-center INDEX 1 URL https://center.conan.io VERIFY_SSL True)
 # 1. configure any conan dependencies here (all dependencies: https://conan.io/center)
 conan_cmake_configure(REQUIRES catch2/2.13.6 spdlog/1.8.5 cpr/1.6.2 threadpool/20140926 simdjson/0.9.6 icu/69.1 GENERATORS cmake_find_package)
 conan_cmake_autodetect(settings)
